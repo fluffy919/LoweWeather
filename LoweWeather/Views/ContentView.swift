@@ -32,9 +32,7 @@ struct ContentView: View {
             .padding()
         }
         .navigationBarHidden(true)
-    }
-    
-    
+    }    
 }
 
 struct ContentView_Previews: PreviewProvider {

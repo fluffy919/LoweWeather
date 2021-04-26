@@ -25,12 +25,17 @@ struct WeatherDetail: View {
             Spacer()
                 .frame(height: 60)
             VStack(spacing: 20) {
-                Text(weather.weather_main!)
-                    .font(.system(size: 40, weight: .bold, design: .default))
-                Text(weather.weather_desc!)
-                    .font(.headline)
+                HStack {
+                    Text(weather.weather_main!)
+                        .font(.system(size: 40, weight: .bold, design: .default))
+                    Spacer()
+                }
+                HStack {
+                    Text(weather.weather_desc!)
+                        .font(.headline)
+                    Spacer()
+                }
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
             Spacer()
         }
         .padding()

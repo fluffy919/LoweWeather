@@ -18,13 +18,11 @@ public class APICall {
         var weathers: [Weather] = [Weather]()
 
         AF.request("https://api.openweathermap.org/data/2.5/forecast?q=\(city)&units=imperial&appid=\(API_KEY)").responseJSON { response in
-            let json = JSON(response.value)
+            let json = JSON(response.value as Any)
             for weather in json["list"].arrayValue {
                 weathers.append(Weather(json: weather))
             }
             completionHandler(weathers)
         }
-
-    }
-    
+    }    
 }
