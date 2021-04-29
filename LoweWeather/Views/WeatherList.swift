@@ -9,8 +9,8 @@ import SwiftUI
 
 struct WeatherList: View {
     
-    @State var weathers: [Weather] = [Weather]()
-    @State var city: String
+    @State private var weathers: [Weather] = [Weather]()
+    let city: String
     
     var body: some View {
         List(weathers) { weather in
